@@ -11,7 +11,7 @@ const Twitter = () => {
         <section className="twitterContainer">
             <div className="twitter-embed">
                 <div>
-                    Tweets by <a href="https://twitter.com/@JustinMDotNet">@JustinMDotNet</a>
+                    Tweets by <a href="https://twitter.com/@JustinMDotNet" target="_blank">@JustinMDotNet</a>
                 </div>
                 <a
                     className="twitter-timeline"
