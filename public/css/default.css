@@ -803,5 +803,11 @@ properly.
 }
 
 
-
+.image-credit-text {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    text-align: right;
+    z-index: 1;
+}
 

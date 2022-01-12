@@ -17,7 +17,6 @@ class Header extends Component {
             networks = this.props.data.social.map(function (network) {
                 return <li key={network.name}><a href={network.url}><i className={network.className}/></a></li>
             })
-
         }
 
         return (
@@ -49,7 +48,9 @@ class Header extends Component {
                         </ul>
                     </div>
                 </div>
-
+                <div className="image-credit-text">
+                    <a href="https://www.pexels.com/photo/small-house-in-a-valley-in-mountains-10697887/" target="_blank" rel="noopener noreferrer">Photo</a> by mark soetebier from Pexels
+                </div>
                 <p className="scrolldown">
                     <a className="smoothscroll" href="#about"><i className="icon-down-circle"/></a>
                 </p>

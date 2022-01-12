@@ -5,6 +5,7 @@ class Resume extends Component {
 
         let skillMessage;
         let education;
+        let certification;
         let work;
         let skills;
 
@@ -12,9 +13,18 @@ class Resume extends Component {
             skillMessage = this.props.data.skillMessage;
             education = this.props.data.education.map(function (education) {
                 return <div key={education.school}><h3>{education.school}</h3>
-                    <p className="info">{education.degree} <span>&bull;</span><em
+                    <p className="date">{education.degree} <span> &bull; </span><em
                         className="date">{education.graduated}</em></p>
                     <p>{education.description}</p></div>
+            })
+            
+            certification = this.props.data.certification.map(function (certificate) {
+                return (<div key={certificate.name}>
+                    <h3>{certificate.name}</h3>
+                    <p className="date">{certificate.issuer} <span> &bull; </span>
+                        {certificate.date}<span> &bull; </span><a href={certificate.url} target="_blank" rel="noopener noreferrer">See Credential</a>
+                    </p>
+                </div>)
             })
             
             work = this.props.data.work.map(function (work) {
@@ -26,7 +36,7 @@ class Resume extends Component {
 
 
                 return <div key={work.company}><h3>{work.company}</h3>
-                    <p className="info">{work.title}<span>&bull;</span> <em className="date">{work.years}</em></p>
+                    <p className="date">{work.title}<span> &bull; </span> <em className="date">{work.years}</em></p>
                     <p>{work.description}</p>
                     {bullets}
                 </div>
@@ -41,7 +51,6 @@ class Resume extends Component {
 
         return (
             <section id="resume">
-
                 <div className="row skill">
 
                     <div className="three columns header-col">
@@ -72,6 +81,20 @@ class Resume extends Component {
                     </div>
                 </div>
 
+                <div className="row education">
+                    <div className="three columns header-col">
+                        <h1><span>Certifications</span></h1>
+                    </div>
+
+                    <div className="nine columns main-col">
+                        <div className="row item">
+                            <div className="twelve columns">
+                                {certification}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <div className="row education">
                     <div className="three columns header-col">
                         <h1><span>Education</span></h1>

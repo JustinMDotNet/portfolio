@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 class About extends Component {
     render() {
 
+        let resumeDownload = "Justin_Moran_Resume.pdf"
+        
         if (this.props.data) {
             var name = this.props.data.name;
             var profilepic = "images/" + this.props.data.image;
@@ -10,7 +12,6 @@ class About extends Component {
             var city = this.props.data.address.city;
             var state = this.props.data.address.state;
             var email = this.props.data.email;
-            var resumeDownload = this.props.data.resumedownload;
         }
 
         return (
@@ -32,11 +33,11 @@ class About extends Component {
                                     <span>{email}</span>
                                 </p>
                             </div>
-                            {/*<div className="columns download">*/}
-                            {/*    <p>*/}
-                            {/*        <a href={resumeDownload} className="button"><i className="fa fa-download"/>Download Resume</a>*/}
-                            {/*    </p>*/}
-                            {/*</div>*/}
+                            <div className="columns download">
+                                <p>
+                                    <a href={resumeDownload} target="_blank" rel="noopener noreferrer" className="button"><i className="fa fa-download"/>Download Resume</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
