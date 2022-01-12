@@ -3,22 +3,33 @@ import React, {Component} from 'react';
 class About extends Component {
     render() {
 
-        let resumeDownload = "Justin_Moran_Resume.pdf"
+        let resumeDownload = "Justin_Moran_Resume.pdf";
+        let name;
+        let profilePic;
+        let bio;
+        let city;
+        let state;
+        let email;
+        let twitter;
+        
         
         if (this.props.data) {
-            var name = this.props.data.name;
-            var profilepic = "images/" + this.props.data.image;
-            var bio = this.props.data.bio;
-            var city = this.props.data.address.city;
-            var state = this.props.data.address.state;
-            var email = this.props.data.email;
+            name = this.props.data.name;
+            profilePic = "images/" + this.props.data.image;
+            bio = this.props.data.bio;
+            city = this.props.data.address.city;
+            state = this.props.data.address.state;
+            email = this.props.data.email;
+            twitter = this.props.data.twitter;
         }
+
+        let twitterUrl = "https://www.twitter.com/" + twitter;
 
         return (
             <section id="about">
                 <div className="row">
                     <div className="three columns">
-                        <img className="profile-pic" src={profilepic} alt="Justin Moran Profile Pic"/>
+                        <img className="profile-pic" src={profilePic} alt="Justin Moran Profile Pic"/>
                     </div>
                     <div className="nine columns main-col">
                         <h2>About Me</h2>
@@ -30,7 +41,8 @@ class About extends Component {
                                 <p className="address">
                                     <span>{name}</span><br/>
                                     <span>{city}, {state}</span><br/>
-                                    <span>{email}</span>
+                                    <span>{email}</span><br/>
+                                    <span><a href={twitterUrl} target="_blank">@{twitter}</a></span>
                                 </p>
                             </div>
                             <div className="columns download">
