@@ -2,11 +2,12 @@
   "main": {
     "name": "Justin Moran",
     "occupation": "Software Engineer",
-    "description": "I primarily work in the Microsoft stack and am interested in all things tech.",
+    "description": "I primarily work in the Microsoft stack and am interested in all things tech",
     "image": "profilepic.jpg",
     "bio": "Microsoft Full Stack Engineer and Software Craftsman focused on designing solutions that adhere to readability best practices and following SOLID Principles.",
     "contactmessage": "Feel free to reach out to me",
     "email": "JustinMDotNet@outlook.com",
+    "twitter": "JustinMDotNet",
     "address": {
       "city": "Redmond",
       "state": "Washington"
@@ -33,6 +34,14 @@
   },
   "resume": {
     "skillMessage": "",
+    "certification": [
+      {
+        "name": "Microsoft Certified: Azure Fundamentals",
+        "issuer": "Microsoft",
+        "date": "December 2021",
+        "url": "https://www.credly.com/users/justin-moran.33a8750d/badges"
+      }
+    ],
     "education": [
       {
         "school": "Arizona State University",
@@ -117,6 +126,14 @@
       {
         "name": ".NET Framework",
         "level": "80%"
+      },
+      {
+        "name": "Typescript",
+        "level": "60%"
+      },
+      {
+        "name": "Javascript",
+        "level": "60%"
       },
       {
         "name": "Unit Testing",
